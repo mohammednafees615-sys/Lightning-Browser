@@ -74,13 +74,13 @@ android {
         create("lightningPlus") {
             dimension = "capabilities"
             buildConfigField("boolean", "FULL_VERSION", "Boolean.parseBoolean(\"true\")")
-            applicationId = "acr.browser.lightning"
+            applicationId = "io.github.nafees.ninja"
             versionCode = commonVersionCode
         }
         create("lightningLite") {
             dimension = "capabilities"
             buildConfigField("boolean", "FULL_VERSION", "Boolean.parseBoolean(\"false\")")
-            applicationId = "acr.browser.barebones"
+            applicationId = "io.github.nafees.ninja.lite"
             versionCode = commonVersionCode
         }
     }
