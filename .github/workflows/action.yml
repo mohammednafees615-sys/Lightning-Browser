@@ -20,5 +20,10 @@ jobs:
           java-version: 25.0.5+8.0.LTS
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v6
-      - name: Build
-        run: ./gradlew build
+      - name: Build Ninja debug APKs
+        run: ./gradlew assembleLightningPlusDebug assembleLightningLiteDebug
+      - name: Upload Ninja APKs
+        uses: actions/upload-artifact@v4
+        with:
+          name: ninja-apks
+          path: app/build/outputs/apk/**/debug/*.apk
